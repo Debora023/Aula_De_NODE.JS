@@ -1,8 +1,8 @@
 import express from "express";
 import { Agen_consultasController } from "./controller/Agen_consultas";
-import { Controller } from "./controller/servico";
-import { Controller } from "./controller/";
-import { UserController } from "./controller/user";
+import { Cadastro_pacienteController } from "./controller/Cadastro_paciente";
+import { OrcamentoController } from "./controller/Orcamento";
+import { Reg_tratamento_ortoController } from "./controller/Reg_tratamento_orto";
 
 export const app = express();
 
@@ -23,9 +23,9 @@ app.use((req, res, next) =>) {
 app.use(express.json());
 
 Agen_consultasController();
-Controller();
-Controller();
-UserController();
+Cadastro_pacienteController();
+OrcamentoController();
+Reg_tratamento_ortoControllerr();
 
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
