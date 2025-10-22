@@ -9,12 +9,12 @@ export class Agendamento {
         private telefone: String
         
     ) {
-    if (!nome) throw new Error("Insira o nome do paciente.");
-    if (!especialidade) throw new Error("Insira o tipo Plano.");
-    if (!email) throw new Error("Insira seu email");
-    if (!telefone) throw new Error("Insira seu número de telefone.");
-    if (!dataConsulta) throw new Error("Insira data da consulta.");      
-    if (!horario) throw new Error("Insira o Horário.");  
+        if (!nome) throw new Error("Insira o nome do paciente.");
+        if (!especialidade) throw new Error("Insira o tipo Plano.");
+        if (!email) throw new Error("Insira seu email");
+        if (!telefone) throw new Error("Insira seu número de telefone.");
+        if (!dataConsulta) throw new Error("Insira data da consulta.");      
+        if (!horario) throw new Error("Insira o Horário."); 
 
     }
 
@@ -44,8 +44,8 @@ export class Agendamento {
         return this.horario;
     }
 
-    getEmail(): String {
-        return this.email;
+    getTelefone(): String {
+        return this.telefone;
     }
 
      getEspecialidade(): String {
