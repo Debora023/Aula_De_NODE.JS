@@ -1,8 +1,8 @@
 import express from "express";
 import { AgendamentoController } from "./controller/Agendamento";
 import { CompraController } from "./controller/Compra";
-import { OrcamentoController } from "./controller/Orcamento";
-import { PacienteController } from "./controller/Paciente";
+
+
 
 
 export const app = express();

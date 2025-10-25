@@ -16,12 +16,13 @@ export class Agendamento {
         if (!dataConsulta) throw new Error("Insira data da consulta.");      
         if (!horario) throw new Error("Insira o Horário."); 
 
+         if (nome.length < 2) throw new Error("nome muito curto");
     }
 
     static create(nome: String, email: String, especialidade: String, dataConsulta: Date, horario: String, telefone: String) {
-        const id = crypto.randomUUID();0
 
-        return new Agendamento(id, nome, email, especialidade, dataConsulta, horario, telefone);
+        const id = crypto.randomUUID();0
+    return new Agendamento(id, nome, email, especialidade, dataConsulta, horario, telefone);
     }
 
     getId(): String {
