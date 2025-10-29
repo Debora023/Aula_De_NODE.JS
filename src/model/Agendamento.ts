@@ -1,4 +1,7 @@
 export class Agendamento {
+    static getdata() {
+        throw new Error("Method not implemented.");
+    }
     constructor(
         private id: String,
         private nome: String,
@@ -20,9 +23,8 @@ export class Agendamento {
     }
 
     static create(nome: String, email: String, especialidade: String, dataConsulta: Date, horario: String, telefone: String) {
-
-        const id = crypto.randomUUID();0
-    return new Agendamento(id, nome, email, especialidade, dataConsulta, horario, telefone);
+        const id = crypto.randomUUID();
+        return new Agendamento(id, nome, email, especialidade, dataConsulta, horario, telefone);
     }
 
     getId(): String {
@@ -33,7 +35,7 @@ export class Agendamento {
         return this.nome;
     }
     
-    geteEmail(): String {
+    getEmail(): String {
         return this.email;
     }
 

@@ -1,12 +1,17 @@
-export class Servico {
+export type FormaPagamento = "cartao_credito" | "cartao_debito" | "pix" | "boleto";
+export type TipoPagamento = "avista" | "parcelado";
+
+
+
+export class Compra {
   constructor(
       private id: string,
       private telefone: string,
        private Cpf: string, 
        private NomeCompleto: string,
       private Nomedoplano: string,
-      private FormaDepagamento: ["Cartão de Crédito", "Cartão de Débito", "PIX", "Boleto"],
-      private tipoDepagamento: ["À vista", "Parcelado"]
+      private FormaDepagamento: FormaPagamento,
+      private tipoDepagamento: TipoPagamento
   ) {
     if (!NomeCompleto) throw new Error("Nome completo obrigatório");
     if (telefone === undefined || telefone === null)
@@ -28,18 +33,48 @@ export class Servico {
     cpf: string,
     NomeCompleto: string,
     Nomedoplano: string,
-    FormaDepagamento: ["Cartão de Crédito", "Cartão de Débito", "PIX", "Boleto"],
-    tipoDepagamento: ["À vista", "Parcelado"]
+    FormaDepagamento: FormaPagamento,
+    tipoDepagamento: TipoPagamento
 
 ) {
-
-
-
-
-
-
-
-
+        const id = crypto.randomUUID();
+        return new Compra(id, telefone, cpf, NomeCompleto, Nomedoplano, FormaDepagamento, tipoDepagamento);
 
 }
+
+  getId(): String {
+        return this.id;
+    }
+
+    getTelefone(): String {
+        return this.telefone;
+    }
+    
+    getCpf(): String {
+        return this.Cpf;
+    }
+
+    getNomeCompleto(): string {
+        return this.NomeCompleto;
+    }
+
+    getNomedoplano(): String {
+        return this.Nomedoplano;
+    }
+
+    getFormaDepagamento(): FormaPagamento {
+        return this.FormaDepagamento;
+    }
+
+     gettipoDePagamento(): TipoPagamento {
+        return this.tipoDepagamento;
+    }
+
+    setForma(FormaDepagamento: FormaPagamento): void {
+    this.FormaDepagamento = FormaDepagamento;
+  }
+
+  setTipo(tipoDepagamento: TipoPagamento): void {
+    this.tipoDepagamento = tipoDepagamento;
+  }
 }
