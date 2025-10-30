@@ -4,11 +4,11 @@ import { CompraController } from "./controller/Compra";
 
 
 
-
 export const app = express();
 
 
-app.use((req, res, next) =>) {
+app.use((req, res, next) => {
+    
     res.header("Access-Control-Allow-Origin", "*"); 
     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
     res.header("Access-Control-Allow-Headers", "Content-type, Authorization");
@@ -19,14 +19,12 @@ app.use((req, res, next) =>) {
     }
 
     next();
-});
+})
 
 app.use(express.json());
 
 AgendamentoController();
 CompraController();
-OrcamentoController();
-PacienteControllar();
 
 app.listen(3000, () => {
     console.log("Server is running on port 3000");

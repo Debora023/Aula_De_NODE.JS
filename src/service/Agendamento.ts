@@ -22,14 +22,7 @@ export class AgendamentoService {
     this.lista.push(AgendamentoCriado);
     return AgendamentoCriado;
   }
-
-  public autenticar(email: string,  dataConsulta: Date, horario: String,  nome: string, especialidade: string,  telefone: string
-) {
-    const Agendamento = this.lista.find((Agendamento) => Agendamento.getEmail() === email);
-
-    return Agendamento;
-}
-
+  
   listarAgendamentos(): Agendamento [] {
     return this.lista;
   }

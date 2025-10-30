@@ -70,11 +70,11 @@ export class Compra {
         return this.tipoDepagamento;
     }
 
-    setForma(FormaDepagamento: FormaPagamento): void {
+    setFormaDepagamento(FormaDepagamento: FormaPagamento): void {
     this.FormaDepagamento = FormaDepagamento;
   }
 
-  setTipo(tipoDepagamento: TipoPagamento): void {
+  settipoDepagamento(tipoDepagamento: TipoPagamento): void {
     this.tipoDepagamento = tipoDepagamento;
   }
 }

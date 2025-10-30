@@ -1,7 +1,4 @@
 export class Agendamento {
-    static getdata() {
-        throw new Error("Method not implemented.");
-    }
     constructor(
         private id: String,
         private nome: String,
